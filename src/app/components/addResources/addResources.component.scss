@@ -1,19 +1,19 @@
 @import "../../../styles.scss";
 .addResource__wrapper{
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-top: 2rem;
-  width: 30rem;
+  width: 36rem;
   box-shadow:$box-shadow;
   border-radius: 0.5rem;
 }
 .addResource__input {
   height: 2rem;
-  width: 28rem;
-  padding: 0 0.5rem;
-  margin: 0 1rem 1rem;
+  width: 32rem;
+  margin: 3rem 2rem;
   border: none;
   border-bottom:0.1px solid #ededed;
   outline: none;
+
 }
 .addResource__button {
   width: 100%;
@@ -46,6 +46,7 @@
   grid-gap: 0.5em;
   font-size: 1.5rem;
   color:$text-color-primary;
+  margin-bottom: 1rem;
 
 }
 .checkbox__input {
@@ -54,6 +55,7 @@
     width: 2em;
     height: 2em;
     margin-left: 2rem;
+    margin-right: 2rem;
   }
 
 }

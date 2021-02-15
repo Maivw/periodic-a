@@ -36,8 +36,7 @@ import {providersData, resourcesData} from "../../resources.model"
     <div class="selectedResource" *ngFor="let item of items">
       <div class="selectedResource__detail">
         <div class="selectedResource__detail-avatar">
-        <div  src="https://color-hex.org/colors/fee5e8.png">
-        </div>
+        <img src="https://color-hex.org/colors/fee5e8.png"/>
         </div>
         <div class="selectedResource__detail-text">
           <div>{{item.name}}</div>

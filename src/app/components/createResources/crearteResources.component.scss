@@ -15,9 +15,10 @@
   &__form {
     flex: 0.7;
     height: 40rem;
-    padding: 2rem 0 2rem 2rem;
+    padding: 2rem 0 4rem 4rem;
     background-color: #fff;
     border-radius: 0.5rem;
+
   }
 
   &__buttonSign-active, &__buttonSign-disable{
@@ -64,26 +65,30 @@
 
 
 .create__button {
-  &-disable {
-    color: $text-color-hover;
-    cursor: not-allowed;
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    & span {
-      margin-left: 0.5rem;
-      font-weight: 500;
-      font-size: 1.5rem;
-    }
-  }
+
   &-active {
     color:$button-active-bg-color;
     cursor: pointer;
     padding: 0.5rem 0;
     display: flex;
     align-items: center;
+    margin-top: 2rem;
+
     & span {
       margin-left: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  &-disable {
+    color: $text-color-hover;
+    cursor: not-allowed;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    & span {
+      margin-left: 0.5rem;
+      font-weight: 500;
       font-size: 1.5rem;
     }
   }
@@ -118,13 +123,14 @@
       font-size: 1.5rem;
     }
     &-avatar {
-      @include positionAbsolute(absolute, 50%, 23%,translate(-50%, -50%));
+      @include positionAbsolute(absolute, 50%, 25%,translate(-50%, -50%));
       background-color:$bg-avatar-item !important;
       border-radius: 50%;
       & img  {
-        width: 4rem;
-        height: 4rem;
+        width: 6rem;
+        height: 6rem;
         border-radius: 50%;
+        object-fit: cover;
       }
     }
   }

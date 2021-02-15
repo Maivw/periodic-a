@@ -46,8 +46,11 @@
   grid-gap: 0.5em;
   font-size: 1.5rem;
   color:$text-color-primary;
-  margin-bottom: 1rem;
+  padding: 1rem 0rem;
 
+}
+.checkbox:hover  {
+  background-color: #ededed;
 }
 .checkbox__input {
   input {
@@ -65,7 +68,7 @@
   width: 1em;
   height: 1em;
   border-radius: 0.25em;
-  border: 2px solid #67DCBA;
+  border: 2px solid $text-color-primary;
   margin-left: 3rem;
 }
 .checkbox__input {
@@ -84,10 +87,13 @@
 .checkbox__input input:checked
  + .checkbox__control svg {
   transform: scale(1);
-  background-color: #67DCBA;
+  background-color:$button-active-bg-color;
+  border: 2px solid $button-active-bg-color;
 }
-
-
+.checkbox__input input:checked
+ + .checkbox__control {
+   border: 2px solid $button-active-bg-color;
+ }
 
 .checkbox__input input:checkbox:disabled
  + .checkbox__control {

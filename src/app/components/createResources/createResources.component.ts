@@ -38,6 +38,7 @@ import {providersData, resourcesData} from "../../resources.model"
         <div class="selectedResource__detail-avatar">
         <img src="https://color-hex.org/colors/fee5e8.png"/>
         </div>
+        <div class="selectedResource__detail-name">{{item.name[0]}}</div>
         <div class="selectedResource__detail-text">
           <div>{{item.name}}</div>
           <span>required</span>

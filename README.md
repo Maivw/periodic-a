@@ -6,5 +6,5 @@
 </p>
 
 ## Build with
-#### React
-#### Material UI
+#### Angular
+#### Angular Material UI

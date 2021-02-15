@@ -1,0 +1,144 @@
+@import "../../../styles.scss";
+.create {
+  &__body {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem 0rem;
+    background-color:$main-bg-color;
+  }
+  &__input {
+    width: 97% !important;
+    margin: 0 auto;
+    color: $text-color-primary;
+  }
+  &__form {
+    flex: 0.7;
+    height: 40rem;
+    padding: 2rem 0 2rem 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+  }
+
+  &__buttonSign-active, &__buttonSign-disable{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    position: relative;
+    &:before{
+      content: "+";
+      @include positionAbsolute(absolute, 50%, 50%,translate(-50%, -50%));
+      display: flex;
+      text-align: center;
+    }
+  }
+  &__buttonSign-active {
+    border: 1.9px solid $button-active-bg-color;
+  }
+  &__buttonSign-disable {
+    border: 1.9px solid $text-color-hover;
+  }
+  &__title {
+    font-weight: 700;
+    padding:1rem 0;
+  }
+}
+
+
+.create__sidebar {
+  flex: 0.3;
+  &-item {
+    padding: 0.8rem;
+    background-color: #E7E7E9;
+    font-weight: 700;
+    color: #000;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    & span {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+
+.create__button {
+  &-disable {
+    color: $text-color-hover;
+    cursor: not-allowed;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    & span {
+      margin-left: 0.5rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+  }
+  &-active {
+    color:$button-active-bg-color;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    & span {
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.selectedResources {
+  @include displayFlex(flex, space-evenly);
+  padding-top: 2rem;
+}
+.selectedResource {
+  border: 0.1px solid #ededed;
+  width: 30%;
+  height: 9rem;
+  position: relative;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  &__detail {
+    @include displayFlex(flex, space-around);
+    flex: 0.8;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: relative !important;
+    &-text {
+      flex: 0.5;
+      display: flex;
+      flex-direction: column;
+      color: $text-color-hover;
+       @include positionAbsolute(absolute, 50%, 50%,translate(-0%, -50%));
+      font-size: 1.5rem;
+    }
+    &-avatar {
+      @include positionAbsolute(absolute, 50%, 23%,translate(-50%, -50%));
+      background-color:$bg-avatar-item !important;
+      border-radius: 50%;
+      & img  {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__removeSign {
+    flex: 0.2;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    cursor: pointer !important;
+  }
+}
+.selectedResource__detail-text  > span {
+  display: block;
+  color: $text-color-primary;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,93 @@
+@import "../../../styles.scss";
+.addResource__wrapper{
+  margin-top: 1rem;
+  padding-top: 2rem;
+  width: 30rem;
+  box-shadow:$box-shadow;
+  border-radius: 0.5rem;
+}
+.addResource__input {
+  height: 2rem;
+  width: 28rem;
+  padding: 0 0.5rem;
+  margin: 0 1rem 1rem;
+  border: none;
+  border-bottom:0.1px solid #ededed;
+  outline: none;
+}
+.addResource__button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color:$button-active-bg-color;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin-bottom: -2rem;
+  position: sticky;
+
+  &:hover {
+    background-color: #67DCBA;
+    transition:$transition-hover;
+    color: whitesmoke;
+  }
+}
+.addResource__checkbox {
+  width: 24rem;
+  margin-left: 3rem !important;
+  color: $text-color-hover;
+  padding: 0.5rem;
+}
+.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+  font-size: 1.5rem;
+  color:$text-color-primary;
+
+}
+.checkbox__input {
+  input {
+    opacity: 0;
+    width: 2em;
+    height: 2em;
+    margin-left: 2rem;
+  }
+
+}
+
+.checkbox__control {
+  display: inline-grid;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.25em;
+  border: 2px solid #67DCBA;
+  margin-left: 3rem;
+}
+.checkbox__input {
+  display: grid;
+  grid-template-areas: "checkbox";
+
+  > * {
+    grid-area: checkbox;
+  }
+}
+.checkbox__control svg {
+  transition: transform 0.1s ease-in 25ms;
+  transform: scale(0);
+  transform-origin: bottom left;
+}
+.checkbox__input input:checked
+ + .checkbox__control svg {
+  transform: scale(1);
+  background-color: #67DCBA;
+}
+
+
+
+.checkbox__input input:checkbox:disabled
+ + .checkbox__control {
+  color: #959495;
+}

@@ -1,0 +1,39 @@
+@import "../../../styles.scss";
+.header {
+  @include displayFlex(flex, space-between);
+  background-color: $main-header-bg;
+  height: $header-height;
+  padding: 2rem;
+  position: static;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  &__logoImage {
+  height: $header-height;
+  width: 15rem;
+  flex: 0.1;
+  margin-left: 2rem;
+  }
+  &__userAccount {
+    flex:0,3;
+    width: 18rem;
+    height: $header-height;
+    margin-right: 2rem;
+    @include displayFlex(flex, space-between);
+    position: relative;
+    & > p {
+      @include positionAbsolute(
+        absolute, 50%, 70%, translate(-50%, -50%)
+      );
+      color:$text-color-primary;
+    }
+  }
+  &__userImage {
+    @include positionAbsolute(
+      absolute, 50%, 30%, translate(-50%, -50%)
+    );
+    height: $header-height;
+    width: 5rem;
+    border-radius: 50%;
+  }
+}

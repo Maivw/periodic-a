@@ -1,0 +1,54 @@
+@import "../../../styles.scss";
+.headerForm {
+  @include displayFlex(flex, space-between);
+  padding: 5rem 0rem;
+  width: $width-container-full;
+  margin: $margin-0-auto;
+  background-color: $main-bg-color;
+  &__buttons {
+    @include displayFlex(flex, space-between);
+    flex: 0.2;
+  }
+}
+
+.headerForm__buttonCancel, .headerForm__buttonSave {
+  width: 11rem;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+.headerForm__buttonCancel {
+  background-color: #F7667B;
+  &:hover {
+    background-color: #E46C77;
+    transition: $transition-hover;
+    color: whitesmoke;
+  }
+}
+.headerForm__buttonSave {
+  background-color: $button-active-bg-color;
+  &:hover {
+    background-color: #67DCBA;
+    transition: $transition-hover;
+    color: whitesmoke;
+  }
+}
+.headerForm__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color:$text-header-form;
+  display: flex;
+  flex: 0.7;
+  &-text{
+    position: relative;
+    color:$text-header-form;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    &:before {
+      content: ">";
+      @include positionAbsolute(absolute, 25%, 0%, translate(-50%, -50%));
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+}

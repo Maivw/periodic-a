@@ -1,0 +1,52 @@
+@import "../../../styles.scss";
+.navbar {
+  @include displayFlex(flex, space-evenly);
+  margin: $margin-0-auto;
+  padding: 5rem 2rem 3rem 2rem;
+  color:$text-color-primary;
+  background-color: $main-bg-color;
+  position: relative;
+  &__column {
+    cursor: pointer;
+    font-size: 1.7rem;
+    &:hover {
+      color:$text-color-hover;
+      transition: $transition-hover;
+    }
+  }
+}
+.configurationNav {
+  @include displayFlex(flex, space-evenly);
+  position: relative;
+  background-color:$main-config-bg;
+  width: $width-container-full !important;
+  margin: 0 auto !important;
+  padding: 3rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  &:after {
+    content: "";
+    position: absolute;
+    top:-4rem;
+    right: 30%;
+    border-left: 2rem solid transparent;
+    border-top: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-bottom: 2rem solid $main-config-bg;
+    z-index: 2;
+  }
+}
+.configurationNav__column{
+  padding: 0.8rem 6rem;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: $transition-hover;
+  &:hover {
+    color: #5946A6;
+    background-color: #EDEAFE;
+    border-radius: 0.7rem;
+    transition: $transition-hover;
+  }
+}

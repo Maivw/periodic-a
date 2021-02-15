@@ -1,0 +1,53 @@
+
+// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+* {
+  margin: 0;
+  padding: 0;
+
+}
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: #F7F7F7;
+  font-size: 62.5%;
+}
+#root {
+	height: 100vh;
+}
+
+
+.app {
+  position: relative;
+  background-color: #F7F7F7;
+
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: rgba(0,0,0,0);
+}
+  $main-bg-color: #F7F7F7;
+  $main-header-bg: #4A4A4A;
+  $main-config-bg: #5022FA;
+  $bg-avatar-item: #FEE5E8;
+  $button-active-bg-color:#4BE8BC;
+  $header-height: 5rem;
+  $text-color-primary: #9B9B9B;
+  $text-color-hover: #575757;
+  $text-header-form: #434343;
+  $transition-hover: all 0.5s linear;
+  $box-shadow: 0 0 10px 0 rgba(87, 86, 86, 0.151);
+  $width-container-full:  85%;
+  $margin-0-auto: 0 auto;
+
+  @mixin displayFlex($display, $justifyContent) {
+    display: $display;
+    justify-content: $justifyContent;
+  }
+  @mixin positionAbsolute($position, $top, $left, $transform) {
+    position: $position;
+    top: $top;
+    left: $left;
+    transform: $transform;
+  }
